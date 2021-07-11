@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerBlue : PlayerBehavior
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform gun;
+    public GameObject bullet;
+    public Vector2 bulletSpawnPos;
+
+    void Awake()
     {
-        
+        App.playerBlue = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Shoot()
     {
-        
+        bulletSpawnPos = gun.position;
+        Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent);
     }
 }

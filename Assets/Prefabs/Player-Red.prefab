@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 3
+  gun: {fileID: 5749951763252133913}
+  bullet: {fileID: 4418258663452788222, guid: fcd3c3edbb86e6346ae950bf69c540fc, type: 3}
+  bulletSpawnPos: {x: 0, y: 0}
 --- !u!1001 &3347286995524158176
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,4 +8,14 @@ public class InGameScreen : ScreenBase
     {
         App.gameManager.ReturnToMenu();
     }
+
+    public void RedShoot()
+    {
+        App.playerRed.Shoot();
+    }
+
+    public void BlueShoot()
+    {
+        App.playerBlue.Shoot();
+    }
 } 

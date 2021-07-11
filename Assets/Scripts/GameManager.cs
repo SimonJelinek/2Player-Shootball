@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         App.gameManager = this;
+        App.parent = inGameHolder;
     }
 
     void Start()

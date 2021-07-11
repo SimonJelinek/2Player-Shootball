@@ -6,4 +6,8 @@ public static class App
 {
     public static GameManager gameManager;
     public static ScreenManager screenManager;
+    public static PlayerBehavior playerBehavior;
+    public static PlayerRed playerRed;
+    public static PlayerBlue playerBlue;
+    public static Transform parent;
 }
