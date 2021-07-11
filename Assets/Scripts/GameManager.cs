@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public Transform inGameHolder;
     public GameObject backGround;
+    public GameObject playerRed;
+    public GameObject playerBlue;
 
     void Awake()
     {
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         App.screenManager.Show<InGameScreen>();
         App.screenManager.Hide<MenuScreen>();
-        backGround.SetActive(true);
+        InstantiateMap();
     }
 
     public void ReturnToMenu()
@@ -35,5 +37,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+
+    void InstantiateMap()
+    {
+        backGround.SetActive(true);
+        Instantiate(playerRed, new Vector2(-0.046f, -3.43f), Quaternion.identity, inGameHolder);
+        Instantiate(playerBlue, new Vector2(-0.046f, 3.48f), Quaternion.identity, inGameHolder);
     }
 }
