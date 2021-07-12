@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3699319535538534038}
   - component: {fileID: 3699319535538534039}
   - component: {fileID: -467446795855545669}
+  - component: {fileID: 7703779089216474258}
   m_Layer: 0
   m_Name: Player-Blue
-  m_TagString: Untagged
+  m_TagString: PlayerBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,32 @@ MonoBehaviour:
   gun: {fileID: 1572394439216537393}
   bullet: {fileID: 4418258663452788222, guid: 5590666d86f65a942bdb3bc37187c0c0, type: 3}
   bulletSpawnPos: {x: 0, y: 0}
+--- !u!61 &7703779089216474258
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3699319535538534033}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00024424493}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.13557243, y: 0.13703811}
+  m_EdgeRadius: 0
 --- !u!1001 &8388615159467990472
 PrefabInstance:
   m_ObjectHideFlags: 0

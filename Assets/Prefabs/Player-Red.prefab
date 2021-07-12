@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9002247710068209780}
   - component: {fileID: 9002247710068209781}
   - component: {fileID: 1326280382210279354}
+  - component: {fileID: -4759158970625372133}
   m_Layer: 0
   m_Name: Player-Red
-  m_TagString: Untagged
+  m_TagString: PlayerRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,32 @@ MonoBehaviour:
   gun: {fileID: 5749951763252133913}
   bullet: {fileID: 4418258663452788222, guid: fcd3c3edbb86e6346ae950bf69c540fc, type: 3}
   bulletSpawnPos: {x: 0, y: 0}
+--- !u!61 &-4759158970625372133
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002247710068209783}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0004852116, y: -0.00024262443}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.13768056, y: 0.13719541}
+  m_EdgeRadius: 0
 --- !u!1001 &3347286995524158176
 PrefabInstance:
   m_ObjectHideFlags: 0
