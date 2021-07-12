@@ -17,8 +17,8 @@ public class RedBulletBehavior : MonoBehaviour
     void Start()
     {
         dir.x = xDir();
-        rb.velocity = new Vector2(dir.x,1)*speed;
-        Debug.Log(dir.x);
+        dir.y = yDir();
+        rb.velocity = new Vector2(dir.x, dir.y)*speed;
     }
 
 
@@ -30,6 +30,18 @@ public class RedBulletBehavior : MonoBehaviour
     float xDir() 
     {
         return App.playerRed.gameObject.transform.rotation.z;
+    }
+
+    int yDir() 
+    {
+        if (dir.x < -0.7f || dir.x > 0.7f) 
+        {
+            return -1;
+        }
+        else 
+        {
+            return 1;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) 

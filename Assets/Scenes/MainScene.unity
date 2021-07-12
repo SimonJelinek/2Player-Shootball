@@ -838,6 +838,7 @@ MonoBehaviour:
   playerBlue: {fileID: 3699319535538534033, guid: dd7feb0b48cd25545b9b441f8b75839c,
     type: 3}
   voidd: {fileID: 2709471731116092389, guid: 578ac137b033fc82481afe98c2b2e720, type: 3}
+  ball: {fileID: 4413904642024918012, guid: ebfb80e70ccb83cfaba68629213b905d, type: 3}
 --- !u!4 &804301309
 Transform:
   m_ObjectHideFlags: 0
