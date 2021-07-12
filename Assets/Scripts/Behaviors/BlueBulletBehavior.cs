@@ -21,8 +21,21 @@ public class BlueBulletBehavior : MonoBehaviour
         Debug.Log(dir.x);
     }
 
+    void FixedUpdate() 
+    {
+        transform.Rotate(new Vector3(0,0,1));
+    }
+
     float xDir() 
     {
         return App.playerBlue.gameObject.transform.rotation.z;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) 
+    {
+        if (collision.gameObject.tag == "Void") 
+        {
+            Destroy(gameObject);
+        }
     }
 }
