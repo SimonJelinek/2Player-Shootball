@@ -17,7 +17,8 @@ public class BlueBulletBehavior : MonoBehaviour
     void Start()
     {
         dir.x = xDir();
-        rb.velocity = new Vector2(dir.x,-1)*speed;
+        dir.y = yDir();
+        rb.velocity = new Vector2(dir.x, dir.y)*speed;
         Debug.Log(dir.x);
     }
 
@@ -29,6 +30,18 @@ public class BlueBulletBehavior : MonoBehaviour
     float xDir() 
     {
         return App.playerBlue.gameObject.transform.rotation.z;
+    }
+
+    int yDir() 
+    {
+        if (dir.x < -0.7f || dir.x > 0.7f) 
+        {
+            return 1;
+        }
+        else 
+        {
+            return -1;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) 
