@@ -16,8 +16,13 @@ public class RedBulletBehavior : MonoBehaviour
 
     void Start()
     {
-        dir = redGun.position;
-        dir.y += 0.3f;
-        rb.velocity = (dir)*speed;
+        dir.x = xDir();
+        rb.velocity = new Vector2(dir.x,1)*speed;
+        Debug.Log(dir.x);
+    }
+
+    float xDir() 
+    {
+        return App.playerRed.gameObject.transform.rotation.z;
     }
 }

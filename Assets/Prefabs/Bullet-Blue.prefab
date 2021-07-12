@@ -100,10 +100,10 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 487dc395e24b1c3c6a5179e4bf376de3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &2531601462667362662
 BoxCollider2D:
@@ -143,5 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda7c03a15b2ef246b0e1916d4bf34d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueGun: {fileID: 7041410331348222713, guid: 81d464c0c434f8745b4283f8633721a5, type: 3}
+  bluePlayer: {fileID: 3699319535538534038, guid: dd7feb0b48cd25545b9b441f8b75839c,
+    type: 3}
   speed: 1

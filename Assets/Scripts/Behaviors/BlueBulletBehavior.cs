@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlueBulletBehavior : MonoBehaviour
 {
-    public Transform blueGun;
+    public Transform bluePlayer;
     public float speed;
     private Rigidbody2D rb;
     private Vector2 dir;
@@ -16,14 +16,13 @@ public class BlueBulletBehavior : MonoBehaviour
 
     void Start()
     {
-        dir = blueGun.position;
-        dir.y += 0.3f;
-        rb.velocity = new Vector2(xDir(),-1)*speed;
+        dir.x = xDir();
+        rb.velocity = new Vector2(dir.x,-1)*speed;
+        Debug.Log(dir.x);
     }
 
     float xDir() 
     {
-        return Random.Range(0f,2f);
-
+        return App.playerBlue.gameObject.transform.rotation.z;
     }
 }
