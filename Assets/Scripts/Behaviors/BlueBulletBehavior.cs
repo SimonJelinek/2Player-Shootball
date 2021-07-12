@@ -17,7 +17,13 @@ public class BlueBulletBehavior : MonoBehaviour
     void Start()
     {
         dir = blueGun.position;
-        dir.y += 0.2f;
-        rb.velocity = (dir) * speed;
+        dir.y += 0.3f;
+        rb.velocity = new Vector2(xDir(),-1)*speed;
+    }
+
+    float xDir() 
+    {
+        return Random.Range(0f,2f);
+
     }
 }

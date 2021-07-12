@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject backGround;
     public GameObject playerRed;
     public GameObject playerBlue;
+    public GameObject voidd;
 
     void Awake()
     {
@@ -45,5 +46,6 @@ public class GameManager : MonoBehaviour
         backGround.SetActive(true);
         Instantiate(playerRed, new Vector2(-0.046f, -3.43f), Quaternion.identity, inGameHolder);
         Instantiate(playerBlue, new Vector2(-0.046f, 3.48f), Quaternion.identity, inGameHolder);
+        Instantiate(voidd, new Vector2(), Quaternion.identity, inGameHolder);
     }
 }

@@ -16,7 +16,6 @@ public class PlayerRed : PlayerBehavior
     public void Shoot()
     {
         bulletSpawnPos = gun.position;
-        bulletSpawnPos.y += 0.2f;
         Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent);
     }
 }

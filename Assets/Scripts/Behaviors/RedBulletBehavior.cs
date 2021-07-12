@@ -17,7 +17,7 @@ public class RedBulletBehavior : MonoBehaviour
     void Start()
     {
         dir = redGun.position;
-        dir.y += 0.2f;
+        dir.y += 0.3f;
         rb.velocity = (dir)*speed;
     }
 }
