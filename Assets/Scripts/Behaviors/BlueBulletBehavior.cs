@@ -19,7 +19,6 @@ public class BlueBulletBehavior : MonoBehaviour
         dir.x = xDir();
         dir.y = yDir();
         rb.velocity = new Vector2(dir.x, dir.y)*speed;
-        Debug.Log(dir.x);
     }
 
     void FixedUpdate() 

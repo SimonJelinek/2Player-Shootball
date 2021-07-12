@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca27527584893c948aca50bbecba2312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 0.5
+  rotSpeed: 3
   gun: {fileID: 1572394439216537393}
   bullet: {fileID: 4418258663452788222, guid: 5590666d86f65a942bdb3bc37187c0c0, type: 3}
   bulletSpawnPos: {x: 0, y: 0}
