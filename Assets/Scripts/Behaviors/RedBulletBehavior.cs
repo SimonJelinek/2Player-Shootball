@@ -46,7 +46,7 @@ public class RedBulletBehavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.gameObject.tag == "Void" || collision.gameObject.tag == "PlayerBlue") 
+        if (collision.gameObject.tag == "Void" || collision.gameObject.tag == "PlayerBlue" || collision.gameObject.tag == "Bullet") 
         {
             Destroy(gameObject);
         }

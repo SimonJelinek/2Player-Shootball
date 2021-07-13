@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject playerBlue;
     public GameObject voidd;
     public GameObject ball;
+    public GameObject shootBlue;
+    public GameObject shootRed;
 
     void Awake()
     {
@@ -49,5 +51,7 @@ public class GameManager : MonoBehaviour
         Instantiate(playerBlue, new Vector2(-0.046f, 3.48f), Quaternion.identity, inGameHolder);
         Instantiate(voidd, new Vector2(), Quaternion.identity, inGameHolder);
         Instantiate(ball, new Vector2(), Quaternion.identity, inGameHolder);
+        Instantiate(shootBlue, new Vector2(-0.021f, 4.105f), Quaternion.identity, inGameHolder);
+        Instantiate(shootRed, new Vector2(-0.03758601f, -3.949393f), Quaternion.identity, inGameHolder);
     }
 }

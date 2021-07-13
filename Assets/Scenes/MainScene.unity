@@ -839,6 +839,10 @@ MonoBehaviour:
     type: 3}
   voidd: {fileID: 2709471731116092389, guid: 578ac137b033fc82481afe98c2b2e720, type: 3}
   ball: {fileID: 4413904642024918012, guid: ebfb80e70ccb83cfaba68629213b905d, type: 3}
+  shootBlue: {fileID: 8952110329256257607, guid: 8404765cc1f4cbe56af35b25ec78746c,
+    type: 3}
+  shootRed: {fileID: 1902079597234641139, guid: b1f537ac8564df2f0b31aaf2f65db705,
+    type: 3}
 --- !u!4 &804301309
 Transform:
   m_ObjectHideFlags: 0

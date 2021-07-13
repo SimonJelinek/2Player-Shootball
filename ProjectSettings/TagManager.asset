@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - PlayerRed
   - PlayerBlue
+  - Shoot
   layers:
   - Default
   - TransparentFX

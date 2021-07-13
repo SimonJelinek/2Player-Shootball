@@ -15,7 +15,10 @@ public class PlayerRed : PlayerBehavior
 
     public void Shoot()
     {
+        //f (Canshoot.blueGreen.gameObject.active) 
+        //{
         bulletSpawnPos = gun.position;
-        Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent);
+        Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent);   
+        //}
     }
 }
