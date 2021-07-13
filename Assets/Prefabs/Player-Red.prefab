@@ -101,6 +101,9 @@ MonoBehaviour:
   gun: {fileID: 5749951763252133913}
   bullet: {fileID: 4418258663452788222, guid: fcd3c3edbb86e6346ae950bf69c540fc, type: 3}
   bulletSpawnPos: {x: 0, y: 0}
+  redGreen: {fileID: 0}
+  redRed: {fileID: 0}
+  canshoot: 1
 --- !u!61 &-4759158970625372133
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -71,6 +71,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2642db1f6c168ccfaa0babc26fc81c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redGreen: {fileID: 6238844755949596995, guid: bb0cb0f37c3c6355199764096c7f149d,
+    type: 3}
+  redRed: {fileID: 4316927721808361494, guid: 4a2b51105c129a0bb94ff0f4d3f98d1b, type: 3}
+  blueGreen: {fileID: 8089733430598419110, guid: b29323d89a759e4448202a843d825b35,
+    type: 3}
+  blueRed: {fileID: 7233495819009118369, guid: da3d7fff60de5b48e8401310f4967883, type: 3}
 --- !u!50 &4826884639292374909
 Rigidbody2D:
   serializedVersion: 4

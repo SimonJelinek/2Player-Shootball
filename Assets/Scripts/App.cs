@@ -9,5 +9,7 @@ public static class App
     public static PlayerBehavior playerBehavior;
     public static PlayerRed playerRed;
     public static PlayerBlue playerBlue;
+    public static Canshoot canshoot;
+    public static Lights lights;
     public static Transform parent;
 }
