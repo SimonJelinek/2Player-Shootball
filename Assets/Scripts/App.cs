@@ -11,5 +11,6 @@ public static class App
     public static PlayerBlue playerBlue;
     public static Canshoot canshoot;
     public static Lights lights;
+    public static InGameScreen inGameScreen;
     public static Transform parent;
 }

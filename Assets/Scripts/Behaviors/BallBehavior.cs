@@ -11,4 +11,16 @@ public class BallBehavior : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collider) 
+    {
+        if (collider.gameObject.tag == "BlueLine") 
+        {
+            App.inGameScreen.RedScore();
+        }
+        if (collider.gameObject.tag == "RedLine") 
+        {
+            App.inGameScreen.BlueScore();
+        }
+    }
 }

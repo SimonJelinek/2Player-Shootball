@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 432116512}
   - component: {fileID: 432116511}
   m_Layer: 5
-  m_Name: ScoreText-Right
+  m_Name: ScoreText-Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 602191876}
   - component: {fileID: 602191875}
   m_Layer: 5
-  m_Name: ScoreText-Left
+  m_Name: ScoreText-Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,6 +1015,7 @@ MonoBehaviour:
     type: 3}
   shootRed: {fileID: 1902079597234641139, guid: b1f537ac8564df2f0b31aaf2f65db705,
     type: 3}
+  lines: {fileID: 4941249720889785507, guid: 401e5c0bcbdd4cf07b197b0e52aecca7, type: 3}
 --- !u!4 &804301309
 Transform:
   m_ObjectHideFlags: 0
@@ -1313,6 +1314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e851233d8235ed41a87f9d283ef3d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redScoreText: {fileID: 432116511}
+  blueScoreText: {fileID: 602191875}
 --- !u!1 &1112185453
 GameObject:
   m_ObjectHideFlags: 0
