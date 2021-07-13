@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         App.screenManager.Show<InGameScreen>();
         App.screenManager.Hide<MenuScreen>();
         InstantiateMap();
+        App.lights.StartGame();
     }
 
     public void ReturnToMenu()
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         App.screenManager.Show<MenuScreen>();
         App.screenManager.Hide<InGameScreen>();
         backGround.SetActive(false);
+        App.lights.ReturnToMenu();
         foreach (Transform child in inGameHolder)
         {
             Destroy(child.gameObject);

@@ -8,6 +8,8 @@ public class PlayerBlue : PlayerBehavior
     public GameObject bullet;
     public Vector2 bulletSpawnPos;
 
+    public bool canshoot = true;
+
     void Awake()
     {
         App.playerBlue = this;
@@ -15,7 +17,13 @@ public class PlayerBlue : PlayerBehavior
 
     public void Shoot()
     {
-        bulletSpawnPos = gun.position;
-        Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent);
+        if (canshoot) 
+        {
+            bulletSpawnPos = gun.position;
+            Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent); 
+            App.lights.blueRed.SetActive(true);
+            App.lights.blueGreen.SetActive(false);  
+            canshoot = false;
+        }
     }
 }
