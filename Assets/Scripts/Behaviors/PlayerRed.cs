@@ -17,6 +17,8 @@ public class PlayerRed : PlayerBehavior
 
     public void Shoot()
     {
+        if (App.gameManager.rotate) 
+        {
         if (canshoot) 
         {
             bulletSpawnPos = gun.position;
@@ -24,6 +26,7 @@ public class PlayerRed : PlayerBehavior
             App.lights.redRed.SetActive(true);
             App.lights.redGreen.SetActive(false);  
             canshoot = false;
+        }
         }
     }
 }

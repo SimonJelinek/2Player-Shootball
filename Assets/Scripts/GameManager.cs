@@ -71,6 +71,12 @@ public class GameManager : MonoBehaviour
         App.ballBehavior.gameObject.SetActive(true);
         App.inGameScreen.redGoalTxt.text = "";
         rotate = true;
+        App.playerRed.canshoot = true;
+        App.playerBlue.canshoot = true;
+        App.lights.redGreen.SetActive(true);
+        App.lights.blueGreen.SetActive(true);
+        App.lights.redRed.SetActive(false);
+        App.lights.blueRed.SetActive(false);
     }
 
     IEnumerator ScoreGoalBlue() 
@@ -81,6 +87,12 @@ public class GameManager : MonoBehaviour
         App.ballBehavior.gameObject.SetActive(true);
         App.inGameScreen.blueGoalTxt.text = "";
         rotate = true;
+        App.playerRed.canshoot = true;
+        App.playerBlue.canshoot = true;
+        App.lights.redGreen.SetActive(true);
+        App.lights.blueGreen.SetActive(true);
+        App.lights.redRed.SetActive(false);
+        App.lights.blueRed.SetActive(false);
     }
 
     void InstantiateMap()
@@ -99,5 +111,11 @@ public class GameManager : MonoBehaviour
     {
         App.playerRed.gameObject.transform.rotation = Quaternion.Euler(0,0,90);
         App.playerBlue.gameObject.transform.rotation = Quaternion.Euler(0,0,90);
+        App.playerRed.canshoot = false;
+        App.playerBlue.canshoot = false;
+        App.lights.redGreen.SetActive(false);
+        App.lights.blueGreen.SetActive(false);
+        App.lights.redRed.SetActive(true);
+        App.lights.blueRed.SetActive(true);
     }
 }

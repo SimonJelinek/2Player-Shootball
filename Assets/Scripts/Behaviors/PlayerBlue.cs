@@ -17,13 +17,15 @@ public class PlayerBlue : PlayerBehavior
 
     public void Shoot()
     {
-        if (canshoot) 
+        if (App.gameManager.rotate) {
+             if (canshoot) 
         {
             bulletSpawnPos = gun.position;
             Instantiate(bullet, bulletSpawnPos, Quaternion.identity, App.parent); 
             App.lights.blueRed.SetActive(true);
             App.lights.blueGreen.SetActive(false);  
             canshoot = false;
+        }
         }
     }
 }
