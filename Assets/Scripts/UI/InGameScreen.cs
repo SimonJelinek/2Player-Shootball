@@ -5,6 +5,8 @@ using TMPro;
 
 public class InGameScreen : ScreenBase
 {
+    public TMP_Text blueGoalTxt;
+    public TMP_Text redGoalTxt;
     public TMP_Text redScoreText;
     public TMP_Text blueScoreText;
 
@@ -35,11 +37,15 @@ public class InGameScreen : ScreenBase
     {
         blueScore++;
         blueScoreText.text = blueScore.ToString();
+        blueGoalTxt.text = "Goal!";
+        App.gameManager.GoalBlue();
     }
 
     public void RedScore() 
     {
         redScore++;
         redScoreText.text = redScore.ToString();
+        redGoalTxt.text = "Goal!";
+        App.gameManager.GoalRed();
     }
 } 

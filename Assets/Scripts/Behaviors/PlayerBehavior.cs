@@ -13,6 +13,9 @@ public class PlayerBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Rotate(new Vector3(0,0,-1*rotSpeed));
+        if (App.gameManager.rotate) 
+        {
+            transform.Rotate(new Vector3(0,0,-1*rotSpeed));
+        }        
     }
 }

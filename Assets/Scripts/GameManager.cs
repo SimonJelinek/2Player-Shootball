@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject shootRed;
     public GameObject lines;
 
+    public bool rotate = true;
+
     void Awake()
     {
         App.gameManager = this;
@@ -47,6 +49,40 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void GoalRed() 
+    {
+        rotate = false;
+        SetStartRot();
+        StartCoroutine(ScoreGoalRed());
+    }
+
+    public void GoalBlue() 
+    {
+        rotate = false;
+        SetStartRot();
+        StartCoroutine(ScoreGoalBlue());
+    }
+
+    IEnumerator ScoreGoalRed() 
+    {
+        App.ballBehavior.gameObject.SetActive(false);
+        yield return new WaitForSeconds(3);
+        App.ballBehavior.gameObject.transform.position = new Vector3();
+        App.ballBehavior.gameObject.SetActive(true);
+        App.inGameScreen.redGoalTxt.text = "";
+        rotate = true;
+    }
+
+    IEnumerator ScoreGoalBlue() 
+    {
+        App.ballBehavior.gameObject.SetActive(false);
+        yield return new WaitForSeconds(3);
+        App.ballBehavior.gameObject.transform.position = new Vector3();
+        App.ballBehavior.gameObject.SetActive(true);
+        App.inGameScreen.blueGoalTxt.text = "";
+        rotate = true;
+    }
+
     void InstantiateMap()
     {
         backGround.SetActive(true);
@@ -57,5 +93,11 @@ public class GameManager : MonoBehaviour
         Instantiate(shootBlue, new Vector2(-0.021f, 4.105f), Quaternion.identity, inGameHolder);
         Instantiate(shootRed, new Vector2(-0.03758601f, -3.949393f), Quaternion.identity, inGameHolder);
         Instantiate(lines, new Vector2(), Quaternion.identity, inGameHolder);
+    }
+
+    void SetStartRot() 
+    {
+        App.playerRed.gameObject.transform.rotation = Quaternion.Euler(0,0,90);
+        App.playerBlue.gameObject.transform.rotation = Quaternion.Euler(0,0,90);
     }
 }
