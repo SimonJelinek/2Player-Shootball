@@ -8,6 +8,7 @@ public class MenuScreen : ScreenBase
     {
         App.screenManager.Show<SettingsScreen>();
         App.screenManager.Hide<MenuScreen>();
+        App.settingsScreen.volume.value = PlayerPrefs.GetFloat("volume");
     }
     
     public void ShowLevels() 
