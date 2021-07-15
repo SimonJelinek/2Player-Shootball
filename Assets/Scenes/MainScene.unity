@@ -1454,6 +1454,9 @@ MonoBehaviour:
   redGoalTxt: {fileID: 588913710}
   redScoreText: {fileID: 432116511}
   blueScoreText: {fileID: 602191875}
+  redTimeTxt: {fileID: 277785398}
+  blueTimeTxt: {fileID: 386488398}
+  time: 0
 --- !u!1 &1112185453
 GameObject:
   m_ObjectHideFlags: 0

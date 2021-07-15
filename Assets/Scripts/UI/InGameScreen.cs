@@ -9,13 +9,37 @@ public class InGameScreen : ScreenBase
     public TMP_Text redGoalTxt;
     public TMP_Text redScoreText;
     public TMP_Text blueScoreText;
+    public TMP_Text redTimeTxt;
+    public TMP_Text blueTimeTxt;
 
+    public float time;
+    float minute;
     int redScore = 0;
     int blueScore = 0;
 
     void Awake() 
     {
         App.inGameScreen = this;
+    }
+
+    void Update() 
+    {
+        if (gameObject.active && App.gameManager.rotate) 
+        {
+            time -= Time.deltaTime;
+            minute -= Time.deltaTime;
+            CheckTime();
+            if (minute >= 10) 
+            {
+               redTimeTxt.text  = ((int)(time/60)).ToString() + ":" + (int)minute; 
+               blueTimeTxt.text = ((int)(time/60)).ToString() + ":" + (int)minute; 
+            }
+            else 
+            {
+               redTimeTxt.text  = ((int)(time/60)).ToString() + ":0" + (int)minute; 
+               blueTimeTxt.text = ((int)(time/60)).ToString() + ":0" + (int)minute; 
+            }
+        }
     }
 
     public void ReturnToMenu()
@@ -47,5 +71,17 @@ public class InGameScreen : ScreenBase
         redScoreText.text = redScore.ToString();
         redGoalTxt.text = "Goal!";
         App.gameManager.GoalRed();
+    }
+
+    void CheckTime() 
+    {
+        if (minute<=0) 
+        {
+            minute = 60;
+        }
+        if (time <= 0) 
+        {
+            Debug.Log("GameOver");
+        }
     }
 } 

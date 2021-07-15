@@ -29,6 +29,7 @@ public class RedBulletBehavior : MonoBehaviour
 
     float xDir() 
     {
+        //return Mathf.Abs(App.playerRed.gameObject.transform.rotation.z);
         return App.playerRed.gameObject.transform.rotation.z;
     }
 

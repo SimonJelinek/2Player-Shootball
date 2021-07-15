@@ -28,6 +28,7 @@ public class BlueBulletBehavior : MonoBehaviour
 
     float xDir() 
     {
+        //return Mathf.Abs(App.playerBlue.gameObject.transform.rotation.z);
         return App.playerBlue.gameObject.transform.rotation.z;
     }
 
