@@ -14,4 +14,9 @@ public class MenuScreen : ScreenBase
     {
         App.screenManager.Hide<LevelsScreen>();
     }
+
+    public void QuitButton() 
+    {
+        Application.Quit();
+    }
 }

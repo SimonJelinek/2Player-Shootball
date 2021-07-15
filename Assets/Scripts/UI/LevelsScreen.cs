@@ -6,8 +6,8 @@ public class LevelsScreen : ScreenBase
 {
     public void StartGameFreePlay()
     {
-        App.gameManager.StartGame(0);
-        App.gameManager.t = 0;
+        App.gameManager.StartGame(777);
+        App.gameManager.t = 777;
         App.inGameScreen.count = false;
         App.inGameScreen.redTimeTxt.text = "0:00";      
         App.inGameScreen.blueTimeTxt.text = "0:00";
