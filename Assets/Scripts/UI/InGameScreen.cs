@@ -14,8 +14,10 @@ public class InGameScreen : ScreenBase
 
     public float time;
     float minute;
-    int redScore = 0;
-    int blueScore = 0;
+    public int redScore = 0;
+    public int blueScore = 0;
+
+    bool count = true;
 
     void Awake() 
     {
@@ -24,7 +26,7 @@ public class InGameScreen : ScreenBase
 
     void Update() 
     {
-        if (gameObject.active && App.gameManager.rotate) 
+        if (gameObject.active && App.gameManager.rotate && count) 
         {
             time -= Time.deltaTime;
             minute -= Time.deltaTime;
@@ -81,7 +83,14 @@ public class InGameScreen : ScreenBase
         }
         if (time <= 0) 
         {
-            Debug.Log("GameOver");
+            count = false;
+            GameOver();
         }
+    }
+
+    void GameOver() 
+    {
+        App.screenManager.Show<GameOverScreen>();
+        App.gameOverScreen.GameOver();
     }
 } 

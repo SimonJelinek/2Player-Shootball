@@ -13,5 +13,6 @@ public static class App
     public static Lights lights;
     public static InGameScreen inGameScreen;
     public static BallBehavior ballBehavior;
+    public static GameOverScreen gameOverScreen;
     public static Transform parent;
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
         App.screenManager.Show<MenuScreen>();
         App.screenManager.Hide<InGameScreen>();
+        App.screenManager.Hide<GameOverScreen>();
         backGround.SetActive(false);
     }
 
@@ -33,20 +35,24 @@ public class GameManager : MonoBehaviour
     {
         App.screenManager.Show<InGameScreen>();
         App.screenManager.Hide<MenuScreen>();
+        App.screenManager.Hide<GameOverScreen>();
         InstantiateMap();
         App.lights.StartGame();
     }
 
     public void ReturnToMenu()
     {
-        App.screenManager.Show<MenuScreen>();
+        /*App.screenManager.Show<MenuScreen>();
         App.screenManager.Hide<InGameScreen>();
+        App.screenManager.Hide<GameOverScreen>();
         backGround.SetActive(false);
         App.lights.ReturnToMenu();
         foreach (Transform child in inGameHolder)
         {
             Destroy(child.gameObject);
-        }
+        }*/
+
+        SceneManager.LoadScene(0);
     }
 
     public void GoalRed() 
