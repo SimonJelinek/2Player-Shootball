@@ -47,6 +47,7 @@ public class InGameScreen : ScreenBase
     public void ReturnToMenu()
     {
         App.gameManager.ReturnToMenu();
+        App.soundManager.PlaySound(3);
     }
 
     public void RedShoot()

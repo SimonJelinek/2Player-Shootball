@@ -17,5 +17,6 @@ public class SettingsScreen : ScreenBase
         Hide();
         App.screenManager.Show<MenuScreen>();
         PlayerPrefs.SetFloat("volume", volume.value);
+        App.soundManager.PlaySound(3);
     }
 }

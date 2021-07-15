@@ -14,6 +14,7 @@ public class BallBehavior : MonoBehaviour
         if (collision.gameObject.tag == "Bullet") 
         {
             Destroy(collision.gameObject);
+            App.soundManager.PlaySound(1);
         }
     }
 
@@ -22,10 +23,12 @@ public class BallBehavior : MonoBehaviour
         if (collider.gameObject.tag == "BlueLine") 
         {
             App.inGameScreen.RedScore();
+            App.soundManager.PlaySound(2);
         }
         if (collider.gameObject.tag == "RedLine") 
         {
             App.inGameScreen.BlueScore();
+            App.soundManager.PlaySound(2);
         }
     }
 }

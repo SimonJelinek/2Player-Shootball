@@ -9,18 +9,21 @@ public class MenuScreen : ScreenBase
         App.screenManager.Show<SettingsScreen>();
         App.screenManager.Hide<MenuScreen>();
         App.settingsScreen.volume.value = PlayerPrefs.GetFloat("volume");
+        App.soundManager.PlaySound(3);
     }
     
     public void ShowLevels() 
     {
         App.screenManager.Show<LevelsScreen>();
         App.screenManager.Hide<MenuScreen>();
+        App.soundManager.PlaySound(3);
     }
 
     public void HideLevels() 
     {
         App.screenManager.Hide<LevelsScreen>();
         App.screenManager.Show<MenuScreen>();
+        App.soundManager.PlaySound(3);
     }
 
     public void QuitButton() 
