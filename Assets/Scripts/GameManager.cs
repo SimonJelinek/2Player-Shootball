@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject lines;
 
     public bool rotate = true;
+    public float t;
 
     void Awake()
     {
@@ -31,27 +32,19 @@ public class GameManager : MonoBehaviour
         backGround.SetActive(false);
     }
 
-    public void StartGame()
+    public void StartGame(float timee)
     {
         App.screenManager.Show<InGameScreen>();
         App.screenManager.Hide<MenuScreen>();
         App.screenManager.Hide<GameOverScreen>();
+        App.screenManager.Hide<LevelsScreen>();
         InstantiateMap();
+        App.inGameScreen.time = timee;
         App.lights.StartGame();
     }
 
     public void ReturnToMenu()
     {
-        /*App.screenManager.Show<MenuScreen>();
-        App.screenManager.Hide<InGameScreen>();
-        App.screenManager.Hide<GameOverScreen>();
-        backGround.SetActive(false);
-        App.lights.ReturnToMenu();
-        foreach (Transform child in inGameHolder)
-        {
-            Destroy(child.gameObject);
-        }*/
-
         SceneManager.LoadScene(0);
     }
 
@@ -63,7 +56,7 @@ public class GameManager : MonoBehaviour
         App.inGameScreen.redScore = 0;
         App.inGameScreen.blueScore = 0;
         App.inGameScreen.ReloadTxt();
-        StartGame();
+        StartGame(t);
     }
 
     public void GoalRed() 
