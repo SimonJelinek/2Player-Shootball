@@ -27,4 +27,9 @@ public class GameOverScreen : ScreenBase
     {
         App.gameManager.ReturnToMenu();
     }
+
+    public void RestartGame() 
+    {
+        App.gameManager.RestartGame();
+    }
 }

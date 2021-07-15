@@ -55,6 +55,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void RestartGame() 
+    {
+        App.screenManager.Hide<GameOverScreen>();
+        App.inGameScreen.time = 60;
+        App.inGameScreen.count = true;
+        App.inGameScreen.redScore = 0;
+        App.inGameScreen.blueScore = 0;
+        App.inGameScreen.ReloadTxt();
+        StartGame();
+    }
+
     public void GoalRed() 
     {
         rotate = false;

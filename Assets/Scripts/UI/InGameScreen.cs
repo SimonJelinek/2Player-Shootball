@@ -17,7 +17,7 @@ public class InGameScreen : ScreenBase
     public int redScore = 0;
     public int blueScore = 0;
 
-    bool count = true;
+    public bool count = true;
 
     void Awake() 
     {
@@ -92,5 +92,11 @@ public class InGameScreen : ScreenBase
     {
         App.screenManager.Show<GameOverScreen>();
         App.gameOverScreen.GameOver();
+    }
+
+    public void ReloadTxt() 
+    {
+        redScoreText.text = redScore.ToString();
+        blueScoreText.text = blueScore.ToString();
     }
 } 
