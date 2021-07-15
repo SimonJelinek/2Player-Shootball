@@ -11,6 +11,7 @@ public class LevelsScreen : ScreenBase
         App.inGameScreen.count = false;
         App.inGameScreen.redTimeTxt.text = "0:00";      
         App.inGameScreen.blueTimeTxt.text = "0:00";
+        App.soundManager.PlaySound(3);
     }
 
     public void StartGameOne()
@@ -18,6 +19,7 @@ public class LevelsScreen : ScreenBase
         App.gameManager.StartGame(60);
         App.gameManager.t = 60;
         App.inGameScreen.count = true;
+        App.soundManager.PlaySound(3);
     }
 
     public void StartGameTwo()
@@ -25,6 +27,7 @@ public class LevelsScreen : ScreenBase
         App.gameManager.StartGame(120);
         App.gameManager.t = 120;
         App.inGameScreen.count = true;
+        App.soundManager.PlaySound(3);
     }
 
     public void StartGameThree()
@@ -32,5 +35,6 @@ public class LevelsScreen : ScreenBase
         App.gameManager.StartGame(180);
         App.gameManager.t = 180;
         App.inGameScreen.count = true;
+        App.soundManager.PlaySound(3);
     }
 }

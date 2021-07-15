@@ -26,6 +26,7 @@ public class PlayerRed : PlayerBehavior
             App.lights.redRed.SetActive(true);
             App.lights.redGreen.SetActive(false);  
             canshoot = false;
+            App.soundManager.PlaySound(0);
         }
         }
     }

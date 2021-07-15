@@ -26,10 +26,12 @@ public class GameOverScreen : ScreenBase
     public void ReturnToMenu() 
     {
         App.gameManager.ReturnToMenu();
+        App.soundManager.PlaySound(3);
     }
 
     public void RestartGame() 
     {
         App.gameManager.RestartGame();
+        App.soundManager.PlaySound(3);
     }
 }

@@ -50,6 +50,7 @@ public class RedBulletBehavior : MonoBehaviour
         if (collision.gameObject.tag == "Void" || collision.gameObject.tag == "PlayerBlue" || collision.gameObject.tag == "Bullet") 
         {
             Destroy(gameObject);
+            App.soundManager.PlaySound(1);
         }
     }
 }

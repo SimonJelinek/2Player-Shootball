@@ -14,5 +14,7 @@ public static class App
     public static InGameScreen inGameScreen;
     public static BallBehavior ballBehavior;
     public static GameOverScreen gameOverScreen;
+    public static SoundManager soundManager;
+    public static SettingsScreen settingsScreen;
     public static Transform parent;
 }
