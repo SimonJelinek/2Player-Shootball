@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class MenuScreen : ScreenBase
 {
-    public void StartGame()
+    
+    public void ShowLevels() 
     {
-        App.gameManager.StartGame();
+        App.screenManager.Show<LevelsScreen>();
+    }
+
+    public void HideLevels() 
+    {
+        App.screenManager.Hide<LevelsScreen>();
     }
 }
