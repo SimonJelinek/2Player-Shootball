@@ -17,4 +17,5 @@ public static class App
     public static SoundManager soundManager;
     public static SettingsScreen settingsScreen;
     public static Transform parent;
+    public static UnityAds unityAds;
 }

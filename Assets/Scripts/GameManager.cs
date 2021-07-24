@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(0);
+        App.unityAds.ShowInterstitial();
     }
 
     public void RestartGame() 
