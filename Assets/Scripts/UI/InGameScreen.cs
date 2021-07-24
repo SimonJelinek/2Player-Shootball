@@ -92,6 +92,7 @@ public class InGameScreen : ScreenBase
     void GameOver() 
     {
         App.screenManager.Show<GameOverScreen>();
+        App.unityAds.ShowInterstitial();
         App.gameOverScreen.GameOver();
     }
 
